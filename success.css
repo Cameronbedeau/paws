@@ -1,0 +1,204 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, img {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ff5722;
+}
+
+header h1 {
+    color: #ff5722;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Success Story Articles */
+.success-story {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 80%;
+}
+
+.success-story img {
+    width: 100%; /* Make images take up 100% of the container's width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+    object-fit: cover; /* Ensure image covers the space */
+    max-height: 400px; /* Limit max height to maintain consistent layout */
+}
+
+.success-story h3 {
+    font-size: 1.8rem;
+    color: #ff5722;
+    margin-top: 15px;
+}
+
+.success-story p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #ff5722;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .success-story h3 {
+        font-size: 1.5rem;
+    }
+
+    .success-story p {
+        font-size: 1rem;
+    }
+
+    .success-story {
+        width: 90%; /* Reduce width on smaller screens */
+    }
+}
+/* Comment Section */
+.comments-section {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 80%;
+    text-align: center;
+}
+
+.comments-section h3 {
+    font-size: 1.8rem;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.comment-form label {
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+.comment-form input, .comment-form textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.comment-form button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-form button:hover {
+    background-color: #e64a19;
+}
+
+.comments-display {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.comments-display p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.comments-display p strong {
+    color: #ff5722;
+}
+

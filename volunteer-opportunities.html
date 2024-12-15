@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawsitive Connections - Volunteer Opportunities</title>
+    <link rel="stylesheet" href="css/volunteer.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Pawsitive Connections</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adoptable-pets.html">Adoptable Pets</a></li>
+                <li><a href="success-stories.html">Success Stories</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="volunteer-opportunities.html">Volunteer</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Volunteer Opportunities</h2>
+        <p>Are you looking to help animals in need? You can volunteer by offering your pets for adoption through our organization. Please fill out the form below to get started!</p>
+
+        <!-- Form to submit volunteer information -->
+        <form id="volunteer-form" action="volunteered.html" method="post" onsubmit="return displayVolunteerInfo(event)">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="pet-name">Pet's Name:</label>
+            <input type="text" id="pet-name" name="pet-name" required>
+
+            <label for="pet-type">Pet Type:</label>
+            <select id="pet-type" name="pet-type" required>
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Section to display submitted volunteer info -->
+        <div id="volunteer-info" style="display: none;">
+            <h3>Thank You for Volunteering!</h3>
+            <p><strong>Your Name:</strong> <span id="display-name"></span></p>
+            <p><strong>Your Email:</strong> <span id="display-email"></span></p>
+            <p><strong>Pet's Name:</strong> <span id="display-pet-name"></span></p>
+            <p><strong>Pet Type:</strong> <span id="display-pet-type"></span></p>
+            <p><strong>Description:</strong> <span id="display-description"></span></p>
+
+            <!-- If incorrect, option to resubmit -->
+            <div id="resubmit-message" style="display: none;">
+                <p>If the information is incorrect, <a href="javascript:void(0);" onclick="resubmitForm()">please resubmit</a> your details.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Follow us on social media!</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+
+    <script>
+        // Function to display submitted volunteer info
+        function displayVolunteerInfo(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Retrieve values from the form
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const petName = document.getElementById('pet-name').value;
+            const petType = document.getElementById('pet-type').value;
+            const description = document.getElementById('description').value;
+
+            // Update the display section with the submitted values
+            document.getElementById('display-name').textContent = name;
+            document.getElementById('display-email').textContent = email;
+            document.getElementById('display-pet-name').textContent = petName;
+            document.getElementById('display-pet-type').textContent = petType;
+            document.getElementById('display-description').textContent = description;
+
+            // Hide the form and show the submitted information
+            document.getElementById('volunteer-form').style.display = 'none';
+            document.getElementById('volunteer-info').style.display = 'block';
+
+            // Display the resubmit message if needed
+            document.getElementById('resubmit-message').style.display = 'block';
+        }
+
+        // Function to allow resubmission of the form
+        function resubmitForm() {
+            // Hide the volunteer info and show the form again
+            document.getElementById('volunteer-info').style.display = 'none';
+            document.getElementById('volunteer-form').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

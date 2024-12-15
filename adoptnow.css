@@ -1,0 +1,181 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ff5722;
+}
+
+header h1 {
+    color: #ff5722;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Adopt Intro Section */
+.adopt-intro {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.adopt-intro h2 {
+    font-size: 2rem;
+    color: #ff5722;
+}
+
+.adopt-intro p {
+    font-size: 1.2rem;
+}
+
+/* Adopt Form Container */
+.adopt-form-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.adopt-form {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.adopt-form fieldset {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.adopt-form legend {
+    font-size: 1.5rem;
+    color: #ff5722;
+    margin-bottom: 10px;
+}
+
+.adopt-form label {
+    font-size: 1.1rem;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.adopt-form input,
+.adopt-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.adopt-form textarea {
+    resize: vertical;
+}
+
+.adopt-form button {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.adopt-form button:hover {
+    background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer .social-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer .social-links li a:hover {
+    color: #ff5722;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .adopt-form-container {
+        padding: 15px;
+    }
+
+    .adopt-form {
+        padding: 20px;
+    }
+
+    .adopt-form button {
+        font-size: 1.1rem;
+    }
+}

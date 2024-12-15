@@ -1,0 +1,173 @@
+/* General Reset */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #1e1e1e;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 3px solid #ff5722;
+}
+
+header h1 {
+    color: #ff5722;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff5722;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Success Message Section */
+.submission-success {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submission-success h2 {
+    font-size: 2rem;
+    color: #ff5722;
+    margin-bottom: 20px;
+}
+
+.submission-success p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.submission-success a {
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.submission-success a:hover {
+    color: #e64a19;
+}
+
+/* Call to Action for Adoption */
+.adopt-again {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #ff5722;
+    color: #fff;
+    border-radius: 8px;
+}
+
+.adopt-again h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.adopt-again p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.adopt-again .home-btn {
+    background-color: #fff;
+    color: #ff5722;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.adopt-again .home-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Footer */
+footer {
+    background-color: #1e1e1e;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+footer ul li a:hover {
+    color: #ff5722;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .submission-success h2 {
+        font-size: 1.8rem;
+    }
+
+    .submission-success p {
+        font-size: 1rem;
+    }
+
+    .adopt-again h3 {
+        font-size: 1.6rem;
+    }
+
+    .adopt-again p {
+        font-size: 1rem;
+    }
+
+    .adopt-again .home-btn {
+        padding: 8px 16px;
+    }
+}

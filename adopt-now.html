@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Now - Pawsitive Connections</title>
+    <link rel="stylesheet" href="css/adoptnow.css">
+    <script>
+        // Script to fetch pet name from the URL
+        document.addEventListener("DOMContentLoaded", () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const petName = urlParams.get("pet");
+            if (petName) {
+                document.getElementById("pet-name-display").textContent = petName;
+                document.getElementById("pet-name").value = petName; // Pre-fill hidden form field
+            }
+        });
+
+        // Function to handle form submission and redirect
+        function handleFormSubmit(event) {
+            event.preventDefault(); // Prevent default form submission
+            window.location.href = "adopted.html"; // Redirect to the 'adopted' page
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Adopt Your New Best Friend</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adoptable-pets.html">Adoptable Pets</a></li>
+                <li><a href="success-stories.html">Success Stories</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="adopt-intro">
+            <h2>You're Adopting: <span id="pet-name-display">[Pet Name]</span></h2>
+            <p>Fill out the form below to begin the adoption process. We’re excited to help you meet your new best friend!</p>
+        </section>
+
+        <section class="adopt-form-container">
+            <form class="adopt-form" onsubmit="handleFormSubmit(event)">
+                <!-- Hidden field for pet name -->
+                <input type="hidden" id="pet-name" name="pet-name" value="">
+
+                <!-- Personal Information -->
+                <fieldset>
+                    <legend>About You</legend>
+                    <label for="adopter-name">Full Name:</label>
+                    <input type="text" id="adopter-name" name="adopter-name" placeholder="Enter your full name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </fieldset>
+
+                <!-- Address -->
+                <fieldset>
+                    <legend>Your Address</legend>
+                    <label for="address">Street Address:</label>
+                    <textarea id="address" name="address" rows="3" placeholder="Enter your full address" required></textarea>
+                </fieldset>
+
+                <!-- Experience -->
+                <fieldset>
+                    <legend>Pet Experience</legend>
+                    <label for="experience">Tell us about your experience with pets:</label>
+                    <textarea id="experience" name="experience" rows="4" placeholder="Why do you want to adopt? Do you have experience with pets?" required></textarea>
+
+                    <label for="home-environment">Describe your home environment:</label>
+                    <textarea id="home-environment" name="home-environment" rows="4" placeholder="Do you have a yard? Other pets? Children?"></textarea>
+                </fieldset>
+
+                <!-- Submit -->
+                <button type="submit" class="submit-btn">Submit Application</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pawsitive Connections. All rights reserved.</p>
+        <ul class="social-links">
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

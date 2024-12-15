@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawsitive Connections - Success Stories</title>
+    <link rel="stylesheet" href="css/success.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Pawsitive Connections</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="adoptable-pets.html">Adoptable Pets</a></li>
+                <li><a href="success-stories.html">Success Stories</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="volunteer-opportunities.html">Volunteer</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Success Stories</h2>
+        <!-- Story 1: Happy Ending for Harry -->
+        <article class="success-story">
+            <h3>Happy Ending for Harry!</h3>
+            <img src="images/dog.jpg" alt="Harry the dog" title="Harry's Happy Ending">
+            <p>Harry the dog found a loving home with a wonderful family!</p>
+        </article>
+
+        <!-- Story 2: Sasha the Snake -->
+        <article class="success-story">
+            <h3>From Scared to Safe - Sasha's New Home</h3>
+            <img src="images/snake.jpg" alt="Sasha the snake" title="Sasha's New Home">
+            <p>Sasha, the ball python, was rescued from a local shelter and now enjoys a safe and comfortable home with her new owners.</p>
+        </article>
+
+        <!-- Story 3: Wolfie the Wolf -->
+        <article class="success-story">
+            <h3>Wolfie Finds a Forever Home!</h3>
+            <img src="images/wolf.jpg" alt="Wolfie the wolf" title="Wolfie's Forever Home">
+            <p>Wolfie, the rescued wolf, found a loving family that understands his needs. Now, he roams freely in a large backyard and enjoys the great outdoors!</p>
+        </article>
+
+        <!-- Comment Section -->
+        <section class="comments-section">
+            <h3>Share Your Thoughts!</h3>
+            <form action="submit_comment.php" method="post" class="comment-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+                <label for="comment">Your Comment:</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Share your thoughts..." required></textarea>
+
+                <button type="submit" class="submit-comment-btn">Submit Comment</button>
+            </form>
+
+            <div class="comments-display">
+                <!-- Placeholder for displaying comments (you would fetch and display comments dynamically here) -->
+                <p><strong>Dain:</strong> What a heartwarming story! I’m so happy for Harry!</p>
+                <p><strong> Kiwanik:</strong> Sasha is so lucky to have found a loving home! Great job to the rescue team!</p>
+                ,<p><strong> Slick: </strong> I dont have pets to relate to this. #lonely #attentionseeking </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Follow us on social media!</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
